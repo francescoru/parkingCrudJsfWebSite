@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Francesco Parking: Register</title>
+    <h:outputStylesheet name="css/style.css"  />
+    <h:outputScript library="js" name="script.js" />
+</h:head>
+<h:body>
+    <f:view>
+        <h:form class="form">
+            <h3>Francesco Parking Sign Up</h3>
+            <h:outputText value="Enter Your First Name:" />
+            <h:inputText id="fname" value="#{user.firstname}"
+                    required="true" requiredMessage="Please enter your first name" />
+            <h:message for="fname" style="color:red" />
+
+
+            <h:outputText value="Enter Your Last Name:" />
+            <h:inputText id="lname" value="#{user.lastname}"
+                    required="true" requiredMessage="Please enter your last name" />
+            <h:message for="lname" style="color:red" />
+
+
+            <h:outputText value="Enter Your Phone Number:" />
+            <h:inputText id="phone" value="#{user.phone}"
+                    required="true" requiredMessage="Please enter your phone number" />
+            <h:message for="phone" style="color:red" />
+
+            <h:outputText value="Enter Your Address:" />
+            <h:inputText id="address" value="#{user.address}"
+                    required="true" requiredMessage="Please enter your address" />
+            <h:message for="address" style="color:red" />
+
+            <h:outputText value="Enter Your Email:" />
+            <h:inputText id="emailAdd" value="#{user.emailAdd}"
+                    required="true" requiredMessage="Please enter your email" />
+            <h:message for="email" style="color:red" />
+
+            <h:outputText value="Enter Your Username:" />
+            <h:inputText id="email" value="#{user.user}"
+                    required="true" requiredMessage="Please enter your email id" />
+            <h:message for="email" style="color:red" />
+
+
+            <h:outputText value="Enter Password :" />
+            <h:inputSecret id="psw" value="#{user.pwd}"
+                    required="true" requiredMessage="Please enter your password" />
+            <h:message for="psw" style="color:red" />
+
+
+           <h:commandButton class="button" value="Register" action="#{user.add}" />
+
+
+           <h:outputLink class="link" value="login.xhtml">Login</h:outputLink>
+                
+        </h:form>
+    </f:view>
+</h:body>
+</html>

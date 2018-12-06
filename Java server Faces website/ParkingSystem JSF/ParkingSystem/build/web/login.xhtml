@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Francesco Parking: Login</title>
+        <h:outputStylesheet name="css/style.css"  />
+</h:head>
+<h:body>
+    
+    <div class="login-page">
+        <h:form class="form">
+            <h3>Francesco Parking Login</h3>
+            <h:messages class="message" /> 
+            <h:outputText value="Username" />
+            <h:inputText id="username" value="#{user.user}"></h:inputText>
+            <h:message for="username"></h:message>
+            <br></br><br></br>
+
+            <h:outputText value="Password" />
+            <h:inputSecret id="password" value="#{user.pwd}"></h:inputSecret>
+            <h:message for="password"></h:message>
+            <br></br><br></br>
+
+            <h:commandButton class="button" action="#{user.validateUsernamePassword}"
+                    value="Login"></h:commandButton> <h:outputLink class="link" value="register.xhtml">Sign Up</h:outputLink>
+           
+	</h:form>
+    </div>
+</h:body>
+</html>

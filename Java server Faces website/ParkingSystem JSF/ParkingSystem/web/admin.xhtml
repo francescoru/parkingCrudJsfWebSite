@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Francesco Parking: Dashboard</title>
+        <h:outputStylesheet name="css/style.css"  />
+        <script>
+            function check_hours() {
+
+                var hours = document.forms["register-car-form"]["register-car-form:duration"].value;
+
+                if (isInt(hours))
+                    return true;
+                else
+                    alert("Error: Hours must be an integer value");
+
+                return false;
+            }
+
+            function isInt(value) {
+                if (isNaN(value)) {
+                    return false;
+                }
+                var x = parseFloat(value);
+                return (x | 0) === x;
+            }
+        </script>
+    </h:head>
+    <h:body>
+        <div class="container">
+
+            <div class="head">
+                <div class="head-left">
+                    <h1>Francesco Parking</h1>
+                </div>
+                <div class="head-right">
+                    <div>
+                        <h:form>
+                            <p>Welcome #{user.user}</p>
+                            <h:commandLink class="link" action="#{user.logout}" value="Logout"></h:commandLink>
+                        </h:form>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><h:outputLink class="link" value="admin.xhtml">Dashboard</h:outputLink></li>
+                            <li><h:outputLink class="link" value="history.xhtml">History</h:outputLink></li>
+                            <li><h:outputLink class="link" value="search.xhtml">Search</h:outputLink></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+
+            <div>
+                <h2>Register Car</h2>
+
+                <h:form id="register-car-form" class="form" onsubmit="return check_hours();">
+                    <h:outputText value="Enter Plate Number" />
+                    <h:inputText id="numberplate" value="#{car.plate}" required="true" requiredMessage="Plate number is required"></h:inputText>
+                    <h:message for="numberplate"></h:message>
+                    <br></br><br></br>
+
+                    <h:outputText value="Enter Duration (hours)" />
+                    <h:inputText id="duration" value="#{car.duration}" required="true"></h:inputText>
+                    <h:message for="duration"></h:message>
+
+                    <h:commandButton class="button" action="#{car.addParking}"
+                                     value="Register Car"></h:commandButton> 
+                </h:form>
+
+                <h2>My Parking</h2>
+
+                <h:dataTable var="row" value="#{parkings.parkings}">
+                    <h:column>
+                        <f:facet name="header">#License Plate</f:facet>
+                            #{row.license}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Duration</f:facet>
+                            #{row.duration}
+                    </h:column>
+
+                    <h:column>
+                        <h:form> 
+                            <h:commandLink class="link" action="#{car.withdrawParking(row.parkingID, row.license, row.duration)}" value="Remove">
+                            </h:commandLink>
+                        </h:form>
+                    </h:column>
+
+                </h:dataTable>
+
+            </div>
+        </div>
+    </h:body>
+</html>

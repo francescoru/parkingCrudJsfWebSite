@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/beans/User.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/beans/Search.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/index.xhtml</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/dao/CarDAO.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/util/DataConnect.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/history.xhtml</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/dao/LoginDAO.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/beans/Parkings.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/beans/Car.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/util/SessionUtils.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/login.xhtml</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/src/java/com/parkingsystems/beans/History.java</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/register.xhtml</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/admin.xhtml</file>
+            <file>file:/Users/wolf/Desktop/ParkingSystem-2/ParkingSystem/web/search.xhtml</file>
+        </group>
+    </open-files>
+</project-private>
